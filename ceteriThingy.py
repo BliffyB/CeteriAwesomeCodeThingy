@@ -2,14 +2,24 @@ import random
 import os,time
 
 
+def menu(choice):
+    if (choice == 0): print('Saturday0')
+    if (choice == 1): print('Saturday0')           
+    if (choice == 2): print('Saturday0')         
+    if (choice == 3): datAss
+    if (choice == 4): tarpsAre
+
+def trapsAre():
+    print ("whalcume to are grat skdjaklajawkljafaf")
+    print (" -incerts all the stuff about traps ")
+    print (" might just make txt file and have it import here ")
+
+def datAss():
+    frames.append (f.readlines())
 
 
 
 
-
-
-
-"""main"""
 os.system('cls')
 filenames = ["new1"]
 frames = []
@@ -29,10 +39,10 @@ print("whalecome to the super awesome "+ guildname + " database \n ")
 print ("What you like to acess? :")
 print ("1. Menu 1")
 print ("2. Menu 2")
-print ("3. Menu 3")
+print ("3. That ass ;D")
+print ("4. Ceteri's collage resheach papers about (Are traps gay?)")
 print ("\n0. Quit")
 choice = input(" >>  ")
 print ("oh wait we have no data here. Thanks bliffy you lazy poop")
-
-
+menu(choice)
 
