@@ -23,20 +23,45 @@ def exec_menu(choice):
             print ("Invalid selection, please try again.\n")
             menu_actions['main_menu']()
     return
+
+# Gender Menu
+
+def gender_menu():
+    print ("1. Trap")
+    print ("2. Attack Helecopter")
+    print ("\n0. Quit")
+    gender_selection = input(" >>  ")
+
+    if gender_selection == '1':
+        selected = 'trap'
+    elif gender_selection == '2':
+        selected = 'attack helecopter'
+
+    exec_gender_menu(selected)
+    return
+
+def exec_gender_menu(selected):
+    try:
+        menu_actions[selected]()
+    except KeyError:
+        print ("Invalid selection, please try again.\n")
+        gender_menu() 
+    return
+
 # Back to main menu
 def back():
     menu_actions['main_menu']()
  
 # Exit program
 def exit():
-    sys.exit()
+    raise SystemExit
 
 def menu(choice):
     if (choice == 0): print('Saturday0')
     if (choice == 1): print('Saturday0')           
     if (choice == 2): print('Saturday0')         
     if (choice == 3): datAss
-    if (choice == 4): tarpsAre
+    if (choice == 4): trapsAre
 
 
 def trapsAre():
@@ -46,6 +71,14 @@ def trapsAre():
 
 def datAss():
     frames.append (f.readlines())
+
+def trap():
+    gender = 'Trap'
+    print("I see you\'re one of us")
+
+def attack_helecopter():
+    gender = 'Attack Helecopter'
+    print("WOH WOH WOH WOH WOH WOH")
 
     
 # =======================
@@ -57,7 +90,9 @@ menu_actions = {
     'main_menu': main_menu,
     '1': trapsAre,
     '2': datAss,
-    '9': back,
+    'trap': trap,
+    'attack helecopter': attack_helecopter,
+    '9': back,   
     '0': exit,
 }
 
@@ -78,6 +113,10 @@ name = input('Hello there what is your name?\n')
 if (name.lower() == "mark"): name = random.choice( ['yarini', 'yarpini', 'i cant say your user name it too hard :( '] )   
 if (name.lower() == "boomzy"): raise Exception('Nice try ape') 
 print("hi "+ name) 
+gender = input('What do you identify as?\n')
+if (gender.lower() == 'trap') or (gender.lower() == 'attack helecopter'): 
+    exec_gender_menu(gender)
+else: gender_menu()
 guildname = random.choice( ['A dead guild', 'ceteri', 'shiteri'] )
 print("whalecome to the super awesome "+ guildname + " database \n ")
 print ("What you like to acess? :")
