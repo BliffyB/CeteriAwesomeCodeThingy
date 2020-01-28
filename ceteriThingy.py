@@ -28,14 +28,14 @@ def exec_menu(choice):
 
 def gender_menu():
     print ("1. Trap")
-    print ("2. Attack Helecopter")
+    print ("2. Attack Helicopter")
     print ("\n0. Quit")
     gender_selection = input(" >>  ")
 
     if gender_selection == '1':
         selected = 'trap'
     elif gender_selection == '2':
-        selected = 'attack helecopter'
+        selected = 'attack helicopter'
 
     exec_gender_menu(selected)
     return
@@ -76,8 +76,8 @@ def trap():
     gender = 'Trap'
     print("I see you\'re one of us")
 
-def attack_helecopter():
-    gender = 'Attack Helecopter'
+def attack_helicopter():
+    gender = 'Attack Helicopter'
     print("WOH WOH WOH WOH WOH WOH")
 
     
@@ -91,7 +91,7 @@ menu_actions = {
     '1': trapsAre,
     '2': datAss,
     'trap': trap,
-    'attack helecopter': attack_helecopter,
+    'attack helicopter': attack_helicopter,
     '9': back,   
     '0': exit,
 }
@@ -114,7 +114,7 @@ if (name.lower() == "mark"): name = random.choice( ['yarini', 'yarpini', 'i cant
 if (name.lower() == "boomzy"): raise Exception('Nice try ape') 
 print("hi "+ name) 
 gender = input('What do you identify as?\n')
-if (gender.lower() == 'trap') or (gender.lower() == 'attack helecopter'): 
+if (gender.lower() == 'trap') or (gender.lower() == 'attack helicopter'): 
     exec_gender_menu(gender)
 else: gender_menu()
 guildname = random.choice( ['A dead guild', 'ceteri', 'shiteri'] )
