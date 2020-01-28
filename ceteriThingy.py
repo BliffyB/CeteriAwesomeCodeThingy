@@ -78,7 +78,7 @@ def trap():
 
 def attack_helicopter():
     gender = 'Attack Helicopter'
-    print("WOH WOH WOH WOH WOH WOH")
+    print(u"\U0001F681 \U0001F681 \U0001F681 \U0001F681")
 
     
 # =======================
